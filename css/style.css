@@ -5,27 +5,62 @@
     outline: none;
 }
 
+body {
+    height: 200vh;
+}
+
 header {
+    position: relative;
     height: 60vmin;
-    background-color: wheat;
+    /* background-color: wheat; */
     --nav-height: 15%;
 }
 
 header nav {
-    height: var(--nav-height);
     display: flex;
+    position: fixed;
+    height: calc(60vmin * 0.15);
+    width: 100%;
+    /* height: var(--nav-height); */
     justify-content: space-between;
     align-items: center;
     background-color: #333;
+    padding: 0 1.5rem 0 2.5rem;
+    z-index: 99;
 }
 
-header section {
+.banner {
+    position: relative;
+    top: var(--nav-height);
     height: calc(100% - var(--nav-height));
-    background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6rem 8rem 6rem 6rem;
+    font-style: oblique;
+    
+    background-color: rgb(41, 46, 51);
+    color: white;
 }
 
-header nav {
-    padding: 0 1.5rem 0 2rem;
+.banner div {
+    position: absolute;
+    top: calc(var(--y) * 1px);
+    left: calc(var(--x) * 1px);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: deepskyblue;
+    filter: blur(3px);
+}
+
+.header-title {
+    font-size: 2.2rem;
+}
+
+.header-subtitle {
+    font-size: 1.4rem;
+    align-self: flex-end;
 }
 
 #nav-title {
@@ -45,13 +80,35 @@ header nav {
     align-items: center;
     color: white;
     text-decoration: none;
-    padding: 0 1.5rem;
-    transition: transform .2s;
+    padding: 0.8rem 1.5rem 0 1.5rem;
+    transition: all .2s;
     /* background-color: lightsalmon; */
 }
 
 .nav-links a:hover {
-    transform: translateY(-0.4rem);
-    filter: drop-shadow(0 1.5rem 5px white);
+    padding-bottom: 0.4rem;
+    border-bottom: 4px solid white;
+    /* transform: translateY(-0.4rem); */
     /* box-shadow: 0 2px 5px white; */
+}
+
+article {
+    height: 20vh;
+    width: 100%;
+}
+
+#about-me {
+    background-color: lightsalmon;
+}
+
+article:nth-child(3) {
+    background-color: lightcoral;
+}
+
+article:nth-child(4) {
+    background-color: lightgreen;
+}
+
+article:nth-child(5) {
+    background-color: lightpink;
 }
