@@ -5,6 +5,12 @@
     outline: none;
 }
 
+:root {
+    --title-font-size: 2.2rem;
+    --main-text-color: #333;
+    --content-font-size: 1.4rem;
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -99,7 +105,7 @@ img {
 #about-me {
     padding: 6rem 2rem 4rem 2rem;
     background-color: #ddd;
-    color: #333;
+    color: var(--main-text-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -137,16 +143,18 @@ img {
 }
 
 .about-me-title {
-    width: 9rem;
     margin-bottom: 2rem;
-    margin-left: -4rem;
-    font-size: 2.2rem;
     border-bottom: 5px solid rgb(82, 93, 102);
     padding-bottom: .5rem;
     white-space: nowrap;
-    text-indent: 2rem;
 
+    /* animation property */
+    width: 9rem;
+    margin-left: -4rem;
+    text-indent: 2rem;
+    font-size: var(--title-font-size);
     animation: title-in 1s ease-out forwards;
+    /* animation property */
 }
 
 #about-me section {
@@ -155,34 +163,124 @@ img {
 }
 
 #about-me p {
-    font-size: 1.3rem;
+    font-size: var(--content-font-size);
     text-indent: 2rem;
     margin-bottom: 2rem;
     letter-spacing: 1px;
 }
 
+#education {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    padding: 5rem 6rem;
+    background-color: aliceblue;
+    color: var(--main-text-color)
+}
+
+.education-title {
+    border-bottom: 5px solid rgb(82, 93, 102);
+    padding-bottom: .5rem;
+    white-space: nowrap;
+    
+    /* animation properties */
+    width: 10rem;
+    text-indent: -3rem;
+    font-size: var(--title-font-size);
+    animation: title-in 1s;
+    /* animation properties */
+}
+
+.edu-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    font-size: var(--content-font-size);
+    letter-spacing: 1px;
+    
+    /* text-align: center; */
+    margin-top: 2.4rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(154, 174, 189);
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+}
+
+.edu-icon:hover {
+    transform: rotateY(360deg);
+}
+
+.edu-icon {
+    width: 6rem;
+    margin-right: 2rem;
+    transition: 1s;
+}
+
 @keyframes title-in {
     from {
         width: 0;
-        margin-left: 0;
         text-indent: 0;
         font-size: 2.5rem;
         color: transparent;
     }
 }
 
-#education {
-    background-color: aliceblue;
+#portfolio {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    background-color: #ddd;
+    color: var(--main-text-color);
+    /* color:transparent; */
+}
+
+.portfolio-title {
+    position: absolute;
+    bottom: calc(100% - 6rem);
+    border-bottom: 5px solid rgb(82, 93, 102);
+    padding-bottom: .5rem;
+    white-space: nowrap;
+    /* margin-left: 10rem; */
+
+    /* background-color: aquamarine; */
+    /* text-align: center; */
+    
+    /* animation properties */
+    width: 16rem;
+    /* text-indent: 4rem; */
+    font-size: var(--title-font-size);
+    animation: title-land 5s;
+    /* animation properties */
+}
+
+.portfolio-title::before {
+    /* content: ''; */
+    position: absolute;
+    top: 0;
+    left: -10%;
+    height: 100%;
+    width: 10%;
+    border-bottom: 5px solid rgb(82, 93, 102);
+}
+
+@keyframes title-land {
+    from {
+        width: 0;
+        padding-bottom: 10rem;
+        /* font-size: 2.5rem; */
+        color: transparent;
+    }
 }
 
 article {
     min-height: 30vmin;
     width: 100%;
-}
-
-
-article:nth-child(3) {
-    background-color: lightcoral;
 }
 
 article:nth-child(4) {
