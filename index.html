@@ -8,6 +8,67 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <script>
+        /*
+        const A = parseInt(window.prompt('Enter number A'))
+        const B = parseInt(window.prompt('Enter number B'))
+        const C = parseInt(window.prompt('Enter number C'))
+
+        let max = A > B ? A : B
+        max = max > C ? max : C
+
+        window.alert(`
+            The greatest number is ${
+                A > B ? 
+                    A > C ? A : C 
+                        : 
+                    B > C ? B : C
+            }
+        `)
+        */
+
+        /*
+        const today = new Date().getDay()
+
+        const days = {
+            0: '日',
+            1: '一',
+            2: '二',
+            3: '三',
+            4: '四',
+            5: '五',
+            6: '六'
+        }
+
+        let aDay = days[today]  
+
+        window.alert(
+            `Today is ${days[today]
+            } and is ${
+                today == 0 || today == 6 ? 
+                    "weekend" : "weekday"
+            }`
+        )
+        */
+        /*
+        let sum = 0
+        for(let i = 1; i <= 100; i ++) sum += i
+        window.alert(sum)
+        */
+
+        // setColor()
+
+        // setColor
+
+        // window.innerHtml
+
+        // window.alert()
+        
+        // for(let i = 1; i <= 100; i ++) 
+        //     (i % 2 !== 0 && i % 3 !== 0) && console.log(i)
+        
+    </script>
+
     <header>
         <nav>
             <a id="nav-title" href="mailto:haohan11pfer@protonmail.com">Hao Han</a>
@@ -15,7 +76,7 @@
                 <a href="#about-me">About me</a>
                 <a href="#education">Education</a>
                 <a href="#portfolio">Portfolio</a>
-                <a href="#skills">My Skills</a>
+                <a href="#skills">Skills</a>
             </div>
         </nav>
         <section class="banner">
@@ -37,32 +98,64 @@
         </section>
     </article>
     <article id="education">
-        <h2 class="education-title">Education</h2>
-        <div class="edu-box">
-            <div class="icon-box">
-                <img class="edu-icon" src="./imgs/tku_icon.png"></img>
-                <p>Tamkang University, Computer Science and Information Engineering </p>
-            </div>
-            <p>2014 - 2015</p>
+    <h2 class="education-title">Education</h2>
+    <div class="edu-box">
+        <div class="icon-box">
+            <img class="edu-icon" src="./imgs/tku_icon.png"></img>
+            <p>Tamkang University, Computer Science and Information Engineering </p>
         </div>
-        <div class="edu-box">
-            <div class="icon-box">
-                <img class="edu-icon" src="./imgs/yzu_icon.png"></img>
-                <p>Yuan Ze University, Computer Science and Information Engineering</p>
-            </div>
-            <p>2015 - 2016</p>
+        <p>2014 - 2015</p>
+    </div>
+    <div class="edu-box">
+        <div class="icon-box">
+            <img class="edu-icon" src="./imgs/yzu_icon.png"></img>
+            <p>Yuan Ze University, Computer Science and Information Engineering</p>
         </div>
-        <div class="edu-box">
-            <div class="icon-box">
-                <img class="edu-icon" src="./imgs/fju_icon.png"></img>
-                <p>Fu Jen Catholic University, BA, Philosophy</p>
-            </div>
-            <p>2017 - 2021</p>
+        <p>2015 - 2016</p>
+    </div>
+    <div class="edu-box">
+        <div class="icon-box">
+            <img class="edu-icon" src="./imgs/fju_icon.png"></img>
+            <p>Fu Jen Catholic University, BA, Philosophy</p>
         </div>
+        <p>2017 - 2021</p>
+    </div>
     </article>
     <article id="portfolio">
         <h2 class="portfolio-title">Portfolio</h2>
+        <div class="grid-container">
+            <div class="img-box">
+                <img src="./imgs/sea.jpg">
+            </div>
+            <div class="img-box">
+                <img src="./imgs/strawberry.jpg">
+            </div>
+            <div class="img-box">
+                <img src="./imgs/japan.jpg">
+            </div>
+            <div class="img-box">
+                <img src="./imgs/japan1.jpg">
+            </div>
+            <div class="img-box">
+                <img src="./imgs/japan2.jpg">
+            </div>
+            <div class="img-box">
+                <img src="./imgs/japan3.jpg">
+            </div>
+            <div class="img-box">
+                <img src="./imgs/food1.jpg">
+            </div>
+            <div class="img-box">
+                <img src="./imgs/food2.jpg">
+            </div>
+            <div class="img-box">
+                <img src="./imgs/flowers1.jpg">
+            </div>
+            <div class="img-box">
+                <img src="./imgs/pancake.jpg">
+            </div>
+        </div>
     </article>
     <article id="skills"></article>
-    </body>
-    </html>
+</body>
+</html>
