@@ -38,10 +38,19 @@ header nav {
     justify-content: space-between;
     align-items: center;
     background-color: #333;
-
+    
     color: white;
     padding: 0 1.5rem 0 2.5rem;
     z-index: 99;
+}
+
+footer {
+    line-height: calc(var(--header-height) * 0.15);
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--content-font-size);
 }
 
 .banner {
@@ -257,7 +266,6 @@ img {
     from {
         width: 0;
         text-indent: 0;
-        /* font-size: 2.5rem; */
         color: transparent;
     }
 }
@@ -327,7 +335,7 @@ img {
     transition: 1s;
 }
 
-.grid-container .img-box:hover  {
+.grid-container .img-box:hover {
     transform: rotateY(180deg);
 }
 
@@ -359,15 +367,182 @@ img {
     object-fit: cover;
 }
 
-article {
-    /* min-height: 30vmin; */
-    width: 100%;
+#skills {
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: 8rem 6rem;
+    background-color: aliceblue;
 }
 
-article:nth-child(4) {
+.skills-title {
+    border-bottom: 6px solid rgb(82, 93, 102);
+    align-self: center;
+    padding-bottom: .5rem;
+    white-space: nowrap;
+    font-size: var(--title-font-size);
+
+    /* animation property */
+    width: 10rem;
+    text-indent: -21%;
+    animation: title-in var(--animation-time) ease-out;
+    /* animation property */
+}
+
+.skill-bar-box {
+    width: 50%;
+    min-width: 500px;
+}
+
+.skill-bar {
+    position: relative;
+    width: 100%;
+    margin-bottom: .5rem;
+    line-height: 2rem;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border: 2px solid rgb(82, 93, 102);
+    border-left: 8px solid rgb(82, 93, 102);
+    border-radius: 0 25px 25px 0;
+    background-color: transparent;
+    z-index: 0;
+}
+
+.skill-bar::before {
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    font-style: oblique;
+    text-indent: 102%;
+    z-index: -1;
+
+    animation: fill-up 5s ease-in-out infinite;
+}
+
+.skill-bar:nth-child(1)::before {
+    content: '90%';
+    width: 90%;
+    background-color: lightskyblue;
+}
+
+.skill-bar:nth-child(2)::before {
+    content: '90%';
+    width: 90%;
+    background-color: lightcoral;
+}
+
+.skill-bar:nth-child(3)::before {
+    content: '80%';
+    width: 80%;
     background-color: lightgreen;
 }
 
-article:nth-child(5) {
-    background-color: lightpink;
+.skill-bar:nth-child(4)::before {
+    content: '60%';
+    width: 60%;
+    background-color: lightsalmon;
+}
+
+.skill-bar:nth-child(5)::before {
+    content: '65%';
+    width: 65%;
+    background-color: wheat;
+}
+
+@keyframes fill-up {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+input, button {
+    outline: none;
+    border: none;
+}
+
+#contact {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+    padding: 6rem 8rem;
+    background-color: #ddd;
+}
+
+.contact-title {
+    width: 12rem;
+    margin: 0 4rem 1rem auto;
+    /* margin-right: 4rem; */
+    text-indent: 45%;
+    align-self: flex-end;
+    padding-bottom: .5rem;
+    white-space: nowrap;
+    font-size: var(--title-font-size);
+    border-bottom: 5px solid rgb(82, 93, 102);
+}
+
+#contact form {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 4rem;
+    font-size: 1.5rem;
+    /* background-color:rgb(152, 163, 172); */
+}
+
+#contact section {
+    width: 50%;
+}
+
+.input-field {
+    line-height: 4rem;
+}
+
+.input-field label {
+    display: inline-block;
+    width: 40%;
+    margin-right: .5rem;
+    text-align: end;
+    /* background-color: aquamarine; */
+}
+
+#contact form input {
+    width: 50%;
+    display: inline-block;
+    padding: .5rem .7rem;
+    font-size: inherit;
+    border-radius: 5px;
+}
+
+#contact form button {
+    font-size: inherit;
+    padding: .5rem;
+    width: 10rem;
+    border-radius: 10px;
+    color: white;
+    align-self: flex-end;
+    background-color: lightskyblue;
+}
+
+#contact form button:hover {
+    background-color: lightsteelblue;
+}
+
+#contact form button:active {
+    margin-bottom: -2px;
+}
+
+#contact section p {
+    font-style: oblique;
+}
+
+#contact section:last-child {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
